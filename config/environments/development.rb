@@ -40,5 +40,5 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
   LIVE_RAIL_USERNAME = 'ted@nadamobile.com'
   LIVE_RAIL_PASSWORD = 'kz2a^eEmsqanm2mxiN)EoHphR'
-  LIVE_RAIL_ENVIRONMENT = 'development'
+  LIVE_RAIL_ENVIRONMENT = 'production'
 end

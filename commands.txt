@@ -30,6 +30,8 @@ git remote -v
 
 git push heroku master
 
+heroku run rake db:migrate
+
 
 ###############################
 

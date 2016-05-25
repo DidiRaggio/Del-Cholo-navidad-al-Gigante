@@ -12,24 +12,24 @@ namespace :objectif_tasks do |variable|
 		puts 'libraries loaded'
 
 		# #Set current time and format
-		# time = Time.new
+		time = Time.new
 		# current = time.strftime("%Y-%m-%d %H:%M:%S")
 
 		# puts 'gets time'
 		# puts time
 		# puts current
 
-		# present = (Time.now - 1.days).strftime("%Y-%m-%d %H:%M:%S")
+		# present = (Time.now ).strftime("%Y-%m-%d %H:%M:%S")
 		# puts 'gets current time'
 		# puts present
 
-		# past = (time - 1.days - 12.hours).strftime("%Y-%m-%d %H:%M:%S")
+		# past = (Time.now - 5.days - 12.hours).strftime("%Y-%m-%d %H:%M:%S")
 		# puts 'time 1 hour ago'
 		# puts past
 
 		#HAVE TO COORDINATE UPDATE TIMES. LIVERAILS UPDATES automatically every 6 hours: each day at 00:00, 06:00, 12:00, 18:00, UTC time zone.
 		# Define arguments for LiveRail '/statistics/aggregated' method
-		my_args = { dimensions:"ad_source_connection_id",  metrics:"impressions,revenue,revenue_ecpm,bid_rate,bid", start:(Time.now - 1.days  - 12.hours).strftime("%Y-%m-%d %H:%M:%S"), end:(Time.now - 1.days).strftime("%Y-%m-%d %H:%M:%S") }
+		my_args = { dimensions:"ad_source_connection_id",  metrics:"impressions,revenue,revenue_ecpm,bid_rate,bid", start:(Time.now - 5.days - 12.hours).strftime("%Y-%m-%d %H:%M:%S"), end:(Time.now ).strftime("%Y-%m-%d %H:%M:%S") }
 		# puts my_args.to_query
 
 
