@@ -1,0 +1,41 @@
+<%= form_for(@testobject) do |f| %>
+  <% if @testobject.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@testobject.errors.count, "error") %> prohibited this testobject from being saved:</h2>
+
+      <ul>
+      <% @testobject.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ad_source_connection_id %><br>
+    <%= f.number_field :ad_source_connection_id %>
+  </div>
+  <div class="field">
+    <%= f.label :impressions %><br>
+    <%= f.number_field :impressions %>
+  </div>
+  <div class="field">
+    <%= f.label :revenue %><br>
+    <%= f.number_field :revenue %>
+  </div>
+  <div class="field">
+    <%= f.label :revenue_ecpm %><br>
+    <%= f.number_field :revenue_ecpm %>
+  </div>
+  <div class="field">
+    <%= f.label :bid %><br>
+    <%= f.number_field :bid %>
+  </div>
+  <div class="field">
+    <%= f.label :bid_rate %><br>
+    <%= f.number_field :bid_rate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

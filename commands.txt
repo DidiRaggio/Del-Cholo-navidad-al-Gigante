@@ -1,0 +1,43 @@
+$ rails generate scaffold testobject ad_source_connection_id:integer impressions:integer revenue:integer revenue_ecpm:integer bid:integer bid_rate:integer run_start_timestamp:timestamp run_end_timestamp:timestamp
+
+$ rake db:migrate
+
+config/routes:   root 'test_objects#index'
+
+export LIVE_RAIL_USERNAME=ted@nadamobile.com
+export LIVE_RAIL_PASSWORD='kz2a^eEmsqanm2mxiN)EoHphR'
+
+$ rake objectif_tasks:update_test_object
+
+
+
+
+
+
+
+
+git init
+
+git add .
+
+git commit -am 'first commit'
+
+heroku login
+
+heroku create (creates repo)
+
+git remote -v
+
+git push heroku master
+
+
+###############################
+
+https://api4.int.liverail.com/tester
+	/statistics/aggregated
+
+	Parameters:
+	dimensions=ad_source_connection_id
+metrics=impressions,revenue,revenue_ecpm,bid_rate,bid
+start=2016-03-05
+end=2016-03-06

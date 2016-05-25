@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ad_source_connection_id: 1
+  impressions: 1
+  revenue: 1
+  revenue_ecpm: 1
+  bid: 1
+  bid_rate: 1
+
+two:
+  ad_source_connection_id: 1
+  impressions: 1
+  revenue: 1
+  revenue_ecpm: 1
+  bid: 1
+  bid_rate: 1

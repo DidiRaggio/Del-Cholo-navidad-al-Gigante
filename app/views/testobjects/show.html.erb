@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ad source connection:</strong>
+  <%= @testobject.ad_source_connection_id %>
+</p>
+
+<p>
+  <strong>Impressions:</strong>
+  <%= @testobject.impressions %>
+</p>
+
+<p>
+  <strong>Revenue:</strong>
+  <%= @testobject.revenue %>
+</p>
+
+<p>
+  <strong>Revenue ecpm:</strong>
+  <%= @testobject.revenue_ecpm %>
+</p>
+
+<p>
+  <strong>Bid:</strong>
+  <%= @testobject.bid %>
+</p>
+
+<p>
+  <strong>Bid rate:</strong>
+  <%= @testobject.bid_rate %>
+</p>
+
+<%= link_to 'Edit', edit_testobject_path(@testobject) %> |
+<%= link_to 'Back', testobjects_path %>
