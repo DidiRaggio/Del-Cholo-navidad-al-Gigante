@@ -55,14 +55,14 @@ namespace :objectif_tasks do |variable|
 
 			#I save it
 			to.save
-		  puts json_to['ad_source_connection_id']
-		  puts json_to['impressions']
-		  puts json_to['revenue']
-		  puts json_to['revenue_ecpm']
-		  puts json_to['bid']
-		  puts json_to['bid_rate']
+		  # puts json_to['ad_source_connection_id']
+		  # puts json_to['impressions']
+		  # puts json_to['revenue']
+		  # puts json_to['revenue_ecpm']
+		  # puts json_to['bid']
+		  # puts json_to['bid_rate']
 		end
-
+		puts 'parsed json'
 	
 
 		# # Use the api to update the db
