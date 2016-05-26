@@ -42,10 +42,10 @@ namespace :objectif_tasks do |variable|
 		puts 'this is the liverail json response'
 		puts response
 
-		# 	# Clean the db
-		# Testobject.destroy_all
+
 
 		response['liverailapi']['report']['row'].each do |json_to|
+			
 		  # do whatever you want with these...
 		  	existingItem = Testobject.where(ad_source_connection_id: json_to["ad_source_connection_id"])
 		  if existingItem
@@ -79,26 +79,9 @@ namespace :objectif_tasks do |variable|
 
 		  end
 
-		  # puts json_to["ad_source_connection_id"]
-
-
-
-
-		 #  	to = Testobject.new
-			# to.ad_source_connection_id = json_to["ad_source_connection_id"]
-			# to.impressions = json_to["impressions"]
-			# to.revenue = json_to["revenue"].delete('$ ,')
-			# to.revenue_ecpm = json_to["revenue_ecpm"]
-			# to.bid = json_to["bid"] 
-			# to.bid_rate = json_to["bid_rate"]
-
-	
-
-			# #I save it
-			# to.save
 
 		end
-		puts 'parsed json'
+
 	
 
 
