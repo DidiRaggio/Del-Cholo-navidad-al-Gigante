@@ -11,28 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160523225425) do
+ActiveRecord::Schema.define(version: 20160525175606) do
 
-  create_table "test_objects", force: :cascade do |t|
-    t.integer  "ad_source_connection_id"
-    t.integer  "impressions"
-    t.integer  "revenue"
-    t.integer  "revenue_ecpm"
-    t.integer  "bid"
-    t.integer  "bid_rate"
-    t.datetime "run_start_timestamp"
-    t.datetime "run_end_timestamp"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-  end
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "testobjects", force: :cascade do |t|
     t.integer  "ad_source_connection_id"
     t.integer  "impressions"
-    t.integer  "revenue"
-    t.integer  "revenue_ecpm"
+    t.decimal  "revenue"
+    t.float    "revenue_ecpm"
     t.integer  "bid"
-    t.integer  "bid_rate"
+    t.float    "bid_rate"
+    t.datetime "start_timestamp"
+    t.datetime "end_timestamp"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
   end

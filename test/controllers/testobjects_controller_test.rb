@@ -18,7 +18,7 @@ class TestobjectsControllerTest < ActionController::TestCase
 
   test "should create testobject" do
     assert_difference('Testobject.count') do
-      post :create, testobject: { ad_source_connection_id: @testobject.ad_source_connection_id, bid: @testobject.bid, bid_rate: @testobject.bid_rate, impressions: @testobject.impressions, revenue: @testobject.revenue, revenue_ecpm: @testobject.revenue_ecpm }
+      post :create, testobject: { ad_source_connection_id: @testobject.ad_source_connection_id, bid: @testobject.bid, bid_rate: @testobject.bid_rate, end_timestamp: @testobject.end_timestamp, impressions: @testobject.impressions, revenue: @testobject.revenue, revenue_ecpm: @testobject.revenue_ecpm, start_timestamp: @testobject.start_timestamp }
     end
 
     assert_redirected_to testobject_path(assigns(:testobject))
@@ -35,7 +35,7 @@ class TestobjectsControllerTest < ActionController::TestCase
   end
 
   test "should update testobject" do
-    patch :update, id: @testobject, testobject: { ad_source_connection_id: @testobject.ad_source_connection_id, bid: @testobject.bid, bid_rate: @testobject.bid_rate, impressions: @testobject.impressions, revenue: @testobject.revenue, revenue_ecpm: @testobject.revenue_ecpm }
+    patch :update, id: @testobject, testobject: { ad_source_connection_id: @testobject.ad_source_connection_id, bid: @testobject.bid, bid_rate: @testobject.bid_rate, end_timestamp: @testobject.end_timestamp, impressions: @testobject.impressions, revenue: @testobject.revenue, revenue_ecpm: @testobject.revenue_ecpm, start_timestamp: @testobject.start_timestamp }
     assert_redirected_to testobject_path(assigns(:testobject))
   end
 

@@ -1,5 +1,0 @@
-Vars:
-	Username: ted@nadamobile.com
-	Password: kz2a^eEmsqanm2mxiN)EoHphR
-	Method: /statistics/aggregated
-	Entity: 133176 

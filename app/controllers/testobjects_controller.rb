@@ -69,6 +69,6 @@ class TestobjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def testobject_params
-      params.require(:testobject).permit(:ad_source_connection_id, :impressions, :revenue, :revenue_ecpm, :bid, :bid_rate)
+      params.require(:testobject).permit(:ad_source_connection_id, :impressions, :revenue, :revenue_ecpm, :bid, :bid_rate, :start_timestamp, :end_timestamp)
     end
 end

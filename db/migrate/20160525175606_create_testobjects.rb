@@ -3,10 +3,12 @@ class CreateTestobjects < ActiveRecord::Migration
     create_table :testobjects do |t|
       t.integer :ad_source_connection_id
       t.integer :impressions
-      t.integer :revenue
-      t.integer :revenue_ecpm
+      t.decimal :revenue
+      t.float :revenue_ecpm
       t.integer :bid
-      t.integer :bid_rate
+      t.float :bid_rate
+      t.datetime :start_timestamp
+      t.datetime :end_timestamp
 
       t.timestamps null: false
     end

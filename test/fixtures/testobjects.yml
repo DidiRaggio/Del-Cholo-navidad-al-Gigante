@@ -3,15 +3,19 @@
 one:
   ad_source_connection_id: 1
   impressions: 1
-  revenue: 1
-  revenue_ecpm: 1
+  revenue: 9.99
+  revenue_ecpm: 1.5
   bid: 1
-  bid_rate: 1
+  bid_rate: 1.5
+  start_timestamp: 2016-05-25 14:56:06
+  end_timestamp: 2016-05-25 14:56:06
 
 two:
   ad_source_connection_id: 1
   impressions: 1
-  revenue: 1
-  revenue_ecpm: 1
+  revenue: 9.99
+  revenue_ecpm: 1.5
   bid: 1
-  bid_rate: 1
+  bid_rate: 1.5
+  start_timestamp: 2016-05-25 14:56:06
+  end_timestamp: 2016-05-25 14:56:06
