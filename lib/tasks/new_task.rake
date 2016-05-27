@@ -18,7 +18,7 @@ namespace :objectif_tasks do |variable|
 		present = (Time.now ).strftime("%Y-%m-%d 23:59:59")
 		
 		# past = (Time.now - 3.hours).strftime("%Y-%m-%d %H:%M:%S")
-		past = (Time.now - 5.days ).strftime("%Y-%m-%d 00:00:00")
+		past = (Time.now ).strftime("%Y-%m-%d 00:00:00")
 
 		presentFaux = (Time.now - 1.hours ).strftime("%Y-%m-%d %H:0:0")
 		pastFaux = (Time.now - 2.hours ).strftime("%Y-%m-%d %H:0:0")
