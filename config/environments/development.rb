@@ -38,5 +38,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-
+  ENV['LIVE_RAIL_USERNAME'] = 'ted@nadamobile.com'
+  ENV['LIVE_RAIL_PASSWORD'] = 'kz2a^eEmsqanm2mxiN)EoHphR'
+  ENV['LIVE_RAIL_ENVIRONMENT'] = 'production'
 end
