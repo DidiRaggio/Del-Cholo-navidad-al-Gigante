@@ -49,16 +49,16 @@ namespace :objectif_tasks do |variable|
 
 			responseRows.each do |responseRow|
 				# Get or build item
-			  item = Testobject.where(ad_source_connection_id: responseRow["ad_source_connection_id"]).first
+			  item = Nadaserve.where(ad_source_connection_id: responseRow["ad_source_connection_id"]).first
 			 
 			  if item
 
-			  	puts 'Testobject#' + responseRow["ad_source_connection_id"].to_s + ' already existed, but was updated'
+			  	puts 'Nadaserve#' + responseRow["ad_source_connection_id"].to_s + ' already existed, but was updated'
 			  else
-			  	item = Testobject.new
+			  	item = Nadaserve.new
 			  	item.ad_source_connection_id = responseRow["ad_source_connection_id"]
 
-			  	puts 'Created Testobject#' + responseRow["ad_source_connection_id"].to_s 
+			  	puts 'Created Nadaserve#' + responseRow["ad_source_connection_id"].to_s 
 				end
 
 				# Update the item itself

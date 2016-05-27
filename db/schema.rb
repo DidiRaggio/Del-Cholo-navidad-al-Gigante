@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160527175626) do
+ActiveRecord::Schema.define(version: 20160527180336) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,8 +33,8 @@ ActiveRecord::Schema.define(version: 20160527175626) do
     t.float    "revenue_ecpm"
     t.integer  "bid"
     t.float    "bid_rate"
-    t.datetime "run_start_timestamp"
-    t.datetime "run_end_timestamp"
+    t.datetime "start_timestamp"
+    t.datetime "end_timestamp"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
   end

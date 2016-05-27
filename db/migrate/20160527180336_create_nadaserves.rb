@@ -7,8 +7,8 @@ class CreateNadaserves < ActiveRecord::Migration
       t.float :revenue_ecpm
       t.integer :bid
       t.float :bid_rate
-      t.timestamp :run_start_timestamp
-      t.timestamp :run_end_timestamp
+      t.datetime :start_timestamp
+      t.datetime :end_timestamp
 
       t.timestamps null: false
     end
