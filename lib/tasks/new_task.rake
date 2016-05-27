@@ -33,42 +33,52 @@ namespace :objectif_tasks do |variable|
 
 		puts 'this is the liverail json response'
 		puts response
-		responseRows = response['liverailapi']['report']['row']
-		# BUILD A LiverailsApiCommunicator for the logic
-		# to here
+
+		responseVerification = response['liverailapi']['status']
+		puts 'accessing the report was a ' + responseVerification
+
+		
+		if responseVerification == "success"
+			# Builds TestObjectParser for logic
+			# from here
 
 
+			responseRows = response['liverailapi']['report']['row']
+			# BUILD A LiverailsApiCommunicator for the logic
+			# to here
 
-		# Builds TestObjectParser for logic
-		# from here
-		responseRows.each do |responseRow|
-			# Get or build item
-		  item = Testobject.where(ad_source_connection_id: responseRow["ad_source_connection_id"]).first
-		 
-		  if item
+			responseRows.each do |responseRow|
+				# Get or build item
+			  item = Testobject.where(ad_source_connection_id: responseRow["ad_source_connection_id"]).first
+			 
+			  if item
 
-		  	puts 'Testobject#' + responseRow["ad_source_connection_id"].to_s + ' already existed, but was updated'
-		  else
-		  	item = Testobject.new
-		  	item.ad_source_connection_id = responseRow["ad_source_connection_id"]
+			  	puts 'Testobject#' + responseRow["ad_source_connection_id"].to_s + ' already existed, but was updated'
+			  else
+			  	item = Testobject.new
+			  	item.ad_source_connection_id = responseRow["ad_source_connection_id"]
 
-		  	puts 'Created Testobject#' + responseRow["ad_source_connection_id"].to_s 
+			  	puts 'Created Testobject#' + responseRow["ad_source_connection_id"].to_s 
+				end
+
+				# Update the item itself
+				item.impressions = responseRow["impressions"]
+				item.revenue = responseRow["revenue"].delete('$ ,')
+				item.revenue_ecpm = responseRow["revenue_ecpm"]
+				item.bid = responseRow["bid"] 
+				item.bid_rate = responseRow["bid_rate"]
+				item.end_timestamp = presentFaux
+				item.start_timestamp = pastFaux
+
+
+				item.save
 			end
+			# Builds TestObjectParser for logic
+			# to here
 
-			# Update the item itself
-			item.impressions = responseRow["impressions"]
-			item.revenue = responseRow["revenue"].delete('$ ,')
-			item.revenue_ecpm = responseRow["revenue_ecpm"]
-			item.bid = responseRow["bid"] 
-			item.bid_rate = responseRow["bid_rate"]
-			item.end_timestamp = presentFaux
-			item.start_timestamp = pastFaux
-
-
-			item.save
 		end
-		# Builds TestObjectParser for logic
-		# to here
+
+
 
 	end
 end

@@ -11,10 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160525175606) do
+ActiveRecord::Schema.define(version: 20160527175626) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "live_rail_communicators", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "nadaserve_parsers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "nadaserves", force: :cascade do |t|
+    t.integer  "ad_source_connection_id"
+    t.integer  "impressions"
+    t.decimal  "revenue"
+    t.float    "revenue_ecpm"
+    t.integer  "bid"
+    t.float    "bid_rate"
+    t.datetime "run_start_timestamp"
+    t.datetime "run_end_timestamp"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
 
   create_table "testobjects", force: :cascade do |t|
     t.integer  "ad_source_connection_id"

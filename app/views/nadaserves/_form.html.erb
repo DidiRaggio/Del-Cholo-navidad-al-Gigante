@@ -1,10 +1,10 @@
-<%= form_for(@testobject) do |f| %>
-  <% if @testobject.errors.any? %>
+<%= form_for(@nadaserf) do |f| %>
+  <% if @nadaserf.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@testobject.errors.count, "error") %> prohibited this testobject from being saved:</h2>
+      <h2><%= pluralize(@nadaserf.errors.count, "error") %> prohibited this nadaserf from being saved:</h2>
 
       <ul>
-      <% @testobject.errors.full_messages.each do |message| %>
+      <% @nadaserf.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -36,12 +36,12 @@
     <%= f.text_field :bid_rate %>
   </div>
   <div class="field">
-    <%= f.label :start_timestamp %><br>
-    <%= f.datetime_select :start_timestamp %>
+    <%= f.label :run_start_timestamp %><br>
+    <%= f.datetime_select :run_start_timestamp %>
   </div>
   <div class="field">
-    <%= f.label :end_timestamp %><br>
-    <%= f.datetime_select :end_timestamp %>
+    <%= f.label :run_end_timestamp %><br>
+    <%= f.datetime_select :run_end_timestamp %>
   </div>
   <div class="actions">
     <%= f.submit %>

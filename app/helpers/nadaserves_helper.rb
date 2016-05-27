@@ -1,0 +1,2 @@
+module NadaservesHelper
+end

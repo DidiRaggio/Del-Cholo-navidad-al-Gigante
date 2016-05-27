@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ad source connection:</strong>
+  <%= @nadaserf.ad_source_connection_id %>
+</p>
+
+<p>
+  <strong>Impressions:</strong>
+  <%= @nadaserf.impressions %>
+</p>
+
+<p>
+  <strong>Revenue:</strong>
+  <%= @nadaserf.revenue %>
+</p>
+
+<p>
+  <strong>Revenue ecpm:</strong>
+  <%= @nadaserf.revenue_ecpm %>
+</p>
+
+<p>
+  <strong>Bid:</strong>
+  <%= @nadaserf.bid %>
+</p>
+
+<p>
+  <strong>Bid rate:</strong>
+  <%= @nadaserf.bid_rate %>
+</p>
+
+<p>
+  <strong>Run start timestamp:</strong>
+  <%= @nadaserf.run_start_timestamp %>
+</p>
+
+<p>
+  <strong>Run end timestamp:</strong>
+  <%= @nadaserf.run_end_timestamp %>
+</p>
+
+<%= link_to 'Edit', edit_nadaserf_path(@nadaserf) %> |
+<%= link_to 'Back', nadaserves_path %>
