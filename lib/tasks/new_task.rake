@@ -19,10 +19,9 @@ namespace :liverailapi do |variable|
 		
 		LiveRailCommunicator.get_report(live_rail_query)
 
-		puts $response
+		# puts $response
 
 		NadaserveParser.create_or_update_from_liverail_row($response)
-
 
 
 	end

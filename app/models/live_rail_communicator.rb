@@ -7,10 +7,7 @@ class LiveRailCommunicator < ActiveRecord::Base
     
     puts 'this is the liverail json response'
 
-	# puts $response
-	# return $response
-
-	
+	# puts response
+	return $response
   end
-
 end
