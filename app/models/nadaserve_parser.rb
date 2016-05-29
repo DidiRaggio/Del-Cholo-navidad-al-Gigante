@@ -1,7 +1,7 @@
 class NadaserveParser < ActiveRecord::Base
-  def self.create_or_update_from_liverail_row(response)
+  def self.create_or_update_from_liverail_row(inputed)
     #logic
-    		responseVerification = response['liverailapi']['status']
+    		responseVerification = inputed['liverailapi']['status']
 		puts 'accessing the report was a ' + responseVerification
 
 		
@@ -10,7 +10,7 @@ class NadaserveParser < ActiveRecord::Base
 			# from here
 
 
-			responseRows = response['liverailapi']['report']['row']
+			responseRows = inputed['liverailapi']['report']['row']
 			# BUILD A LiverailsApiCommunicator for the logic
 			# to here
 
