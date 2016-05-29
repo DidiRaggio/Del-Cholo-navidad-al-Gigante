@@ -30,8 +30,13 @@ test:
   password: Raggio88
 
 production:
-  <<: *default
-  adapter: postgresql
-  database: objectif_test_db
-  user: postgres
-  password: Raggio88
+  adapter: mysql2
+  encoding: utf8
+  database: nadaserve
+  pool: 5
+  username: servenada
+  password: UQoFDuU8sYsVsqn6pj299vtg
+
+# $servername = "nadacroix2.cozhlbrr0blk.us-east-1.rds.amazonaws.com";
+# network_analytics is the table
+
