@@ -34,7 +34,7 @@ class NadaserveParser < ActiveRecord::Base
 				item.save
 			end
 		else
-			puts ''
+
 		end
   end
 end
