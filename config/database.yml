@@ -29,14 +29,24 @@ test:
   user: postgres
   password: Raggio88
 
+# production:
+#   adapter: mysql2
+#   encoding: utf8
+#   database: nadaserve
+#   pool: 5
+#   username: servenada
+#   password: UQoFDuU8sYsVsqn6pj299vtg
+
 production:
   adapter: mysql2
   encoding: utf8
   database: nadaserve
   pool: 5
-  username: servenada
-  password: UQoFDuU8sYsVsqn6pj299vtg
-
+  username: DidiRaggio
+  password: Punkwasbornin1977
 # $servername = "nadacroix2.cozhlbrr0blk.us-east-1.rds.amazonaws.com";
 # network_analytics is the table
 
+ # DB Instance Identifier* AuroraTest
+ # MasterUsername* DidiRaggio
+ # Password....
