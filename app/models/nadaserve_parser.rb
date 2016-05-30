@@ -1,18 +1,11 @@
 class NadaserveParser < ActiveRecord::Base
   def self.create_or_update_from_liverail_row(inputed)
     #logic
-    		responseVerification = inputed['liverailapi']['status']
-		puts 'accessing the report was a ' + responseVerification
-
-		
+    	responseVerification = inputed['liverailapi']['status']
+		puts 'Data query to LiveRail was a ' + responseVerification
 		if responseVerification == "success"
-			# Builds NadaserveParser for logic
-			# from here
-
-
+			
 			responseRows = inputed['liverailapi']['report']['row']
-			# BUILD A LiverailsApiCommunicator for the logic
-			# to here
 
 			responseRows.each do |responseRow|
 				# Get or build item
@@ -26,7 +19,7 @@ class NadaserveParser < ActiveRecord::Base
 			  	item.ad_source_connection_id = responseRow["ad_source_connection_id"]
 
 			  	puts 'Created Nadaserve#' + responseRow["ad_source_connection_id"].to_s 
-				end
+			  end
 
 				# Update the item itself
 				item.impressions = responseRow["impressions"]
@@ -40,9 +33,8 @@ class NadaserveParser < ActiveRecord::Base
 
 				item.save
 			end
-			# Builds TestObjectParser for logic
-			# to here
-
+		else
+			puts ''
 		end
   end
 end

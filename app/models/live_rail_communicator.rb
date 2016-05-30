@@ -3,11 +3,6 @@ class LiveRailCommunicator < ActiveRecord::Base
  
     LiverailsApi.instance.login
     LiverailsApi.instance.statistics_aggregated live_rail_query
- #    response = LiverailsApi.instance.statistics_aggregated live_rail_query
-    
- #    puts 'this is the liverail json response'
 
-	# # puts response
-	# return response
   end
 end
