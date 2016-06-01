@@ -55,14 +55,14 @@ test:
 #   username: DidiRaggio
 #   password: Punk
 
-# production:
-#   adapter: mysql2
-#   encoding: utf8
-#   database: nadaserve
-#   username: test
-#   password: test1
-#   host: testdbinstance-cluster.cluster-c4hqf80srese.us-east-1.rds.amazonaws.com
-#   port: 3306
+production:
+  adapter: mysql2
+  encoding: utf8
+  database: ENV['RDS_DB']
+  username: ENV['RDS_USERNAME']
+  password: ENV['RDS_PASSWORD']
+  host: ENV['RDS_HOST']
+  port: 3306
 
 # $servername = "nadacroix2.cozhlbrr0blk.us-east-1.rds.amazonaws.com";
 # $username = "servenada";
