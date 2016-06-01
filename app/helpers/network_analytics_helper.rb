@@ -1,0 +1,2 @@
+module NetworkAnalyticsHelper
+end
