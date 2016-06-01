@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  # resources :nadaserves
-  # resources :testobjects
+
+  # resources :network_analytics
   # root 'testobjects#index'
  
 end

@@ -1,6 +1,6 @@
-class CreateNadaserves < ActiveRecord::Migration
+class CreateNetworkAnalytics < ActiveRecord::Migration
   def change
-    create_table :nadaserves do |t|
+    create_table :network_analytics do |t|
       t.integer :ad_source_connection_id
       t.integer :impressions
       t.decimal :revenue

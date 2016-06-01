@@ -9,16 +9,16 @@ class NadaserveParser < ActiveRecord::Base
 
 			responseRows.each do |responseRow|
 				# Get or build item
-			  item = Nadaserve.where(ad_source_connection_id: responseRow["ad_source_connection_id"]).first
+			  item = NetworkAnalytic.where(ad_source_connection_id: responseRow["ad_source_connection_id"]).first
 			 
 			  if item
 
-			  	puts 'Nadaserve#' + responseRow["ad_source_connection_id"].to_s + ' already existed, but was updated'
+			  	puts 'NetworkAnalytic#' + responseRow["ad_source_connection_id"].to_s + ' already existed, but was updated'
 			  else
-			  	item = Nadaserve.new
+			  	item = NetworkAnalytic.new
 			  	item.ad_source_connection_id = responseRow["ad_source_connection_id"]
 
-			  	puts 'Created Nadaserve#' + responseRow["ad_source_connection_id"].to_s 
+			  	puts 'Created NetworkAnalytic#' + responseRow["ad_source_connection_id"].to_s 
 			  end
 
 				# Update the item itself
