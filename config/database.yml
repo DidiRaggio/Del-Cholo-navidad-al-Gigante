@@ -47,13 +47,22 @@ test:
 #   username: servenada
 #   password: UQoFDuU8sYsVsqn6pj299vtg
 
+# production:
+#   adapter: mysql2
+#   encoding: utf8
+#   database: nadaserve
+#   pool: 5
+#   username: DidiRaggio
+#   password: Punkwasbornin1977
+
 production:
   adapter: mysql2
   encoding: utf8
-  database: nadaserve
-  pool: 5
-  username: DidiRaggio
-  password: Punkwasbornin1977
+  database: my_db_name
+  username: root
+  password: Raggio88
+  host: 127.0.0.1
+  port: 3306
 
 # $servername = "nadacroix2.cozhlbrr0blk.us-east-1.rds.amazonaws.com";
 # $username = "servenada";
