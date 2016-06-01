@@ -5,7 +5,7 @@ namespace :live_rail_api do |variable|
 	desc "Log the db, delete the db, then update the db"
 
 
-	task :update_network_analytic => :environment do
+	task :update_network_analytics => :environment do
 
 		# Libraries needed to parse the SON response.
 		require 'json'
