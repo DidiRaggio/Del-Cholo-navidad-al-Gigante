@@ -17,7 +17,7 @@ namespace :live_rail_api do |variable|
 							end:(Time.now ).strftime("%Y-%m-%d 23:59:59")
 						  }
 		
-		puts 'start time:' + (Time.now ).strftime("%Y-%m-%d 00:00:00")
+		puts 'start time:' + (Time.now - 1.days ).strftime("%Y-%m-%d 00:00:00")
 		puts 'end time:' + (Time.now ).strftime("%Y-%m-%d 23:59:59")
 
 		response = LiveRailCommunicator.get_report(live_rail_query)
