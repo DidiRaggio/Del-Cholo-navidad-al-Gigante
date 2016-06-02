@@ -12,12 +12,7 @@ default: &default
   pool: 5
   timeout: 5000
 
-# development:
-#   <<: *default
-#   adapter: postgresql
-#   database: objectif_test_db
-#   user: postgres
-#   password: Raggio88
+
 development:
   adapter: mysql2
   encoding: utf8
@@ -39,21 +34,6 @@ test:
   user: postgres
   password: Raggio88
 
-# production:
-#   adapter: mysql2
-#   encoding: utf8
-#   database: nadaserve
-#   pool: 5
-#   username: servenada
-#   password: UQoFDuU8sYsVsqn6pj299vtg
-
-# production:
-#   adapter: mysql2
-#   encoding: utf8
-#   database: nadaserve
-#   pool: 5
-#   username: DidiRaggio
-#   password: Punk
 
 production:
   adapter: mysql2
@@ -64,16 +44,3 @@ production:
   host: <%= ENV['RDS_HOST'] %>
   port: <%= ENV['RDS_PORT'] %>
 
-# $servername = "nadacroix2.cozhlbrr0blk.us-east-1.rds.amazonaws.com";
-# $username = "servenada";
-# $password = "UQoFDuU8sYsVsqn6pj299vtg";
-# $dbname = "nadaserve";
-# $servername = "nadacroix2.cozhlbrr0blk.us-east-1.rds.amazonaws.com";
-# network_analytics is the table
-
- # DB Instance Identifier* AuroraTest
- # MasterUsername* DidiRaggio
- # Password....
-
-
-# my ip: 190.17.188.46
