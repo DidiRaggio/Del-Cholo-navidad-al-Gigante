@@ -1,5 +1,0 @@
-1. Run rspec on model object for network_analytics_task
-2. Migrate from MySQL2 to Postgresql
-3. set up AWS RDS Aurora
-4. delete surpluss acccount info
-5. assign ENV vars to heroku account, encript MC5
